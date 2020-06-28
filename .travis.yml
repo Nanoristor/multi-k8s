@@ -7,11 +7,11 @@ env:
     - CLOUDSDK_CORE_DISABLE_PROMPTS=1
 
 before install:
-  - openssl aes-256-cbc -K $encrypted_9f3b5599b056_key -iv $encrypted_9f3b5599b056_iv -in service-account1.json.enc -out service-account.json -d
+  - openssl aes-256-cbc -K $encrypted_9f3b5599b056_key -iv $encrypted_9f3b5599b056_iv -in service-accountmod.json.enc -out service-accountmod.json -d
   - curl https://sdk.cloud.google.com | bash > /dev/null;
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
-  - gcloud auth activate-service-account --key-file service-account1.json
+  - gcloud auth activate-service-account --key-file service-accountmod.json
   - gcloud config set project iron-lodge-281621
   - gcloud config set compute/zone us-east1-b
   - gcloud container clusters get-credentials multi-cluster
