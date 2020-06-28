@@ -13,7 +13,7 @@ before install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project iron-lodge-281621
-  - gloud config set compute/zone us-east1-b
+  - gcloud config set compute/zone us-east1-b
   - gcloud container clusters get-credentials multi-cluster
   - echo "DOCKER_PASSWORD" | docker login -u  "DOCKER_USERNAME" --password-stdin
   - docker build -t bmszone/react-test -f ./client/Dockerfile.dev ./client
