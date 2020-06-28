@@ -1,0 +1,20 @@
+apiVersion: certmanager.k8s.io/v1alpha2
+kind: Certificate
+metadata:
+  name: nanok8s-com-tls
+spec:
+  secretName: nanok8s-com
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: nanok8s.com
+  dnsNames:
+    - nanok8s.com
+    - www.nanok8s.com
+  acme:
+    config:
+      - http01:
+        ingressClass: nginx
+      domains:
+        - nanok8s.com
+        - www.nanok8s.com
