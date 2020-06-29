@@ -9,7 +9,7 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: 'true'
 spec:
   tls:
-    -hosts:
+    - hosts:
         - nanok8s.com
         - www.nanok8s.com
       secretName: nanok8s-com
