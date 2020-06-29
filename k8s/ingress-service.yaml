@@ -15,7 +15,7 @@ spec:
       secretName: nano-k8s-com
   rules:
     - host: nanok8s.com
-    - http:
+      http:
         paths:
           - path: /?(.*)
             backend:
@@ -26,7 +26,7 @@ spec:
               serviceName: server-cluster-ip-service
               servicePort: 5000
     - host: www.nanok8s.com
-    - http:
+      http:
         paths:
           - path: /?(.*)
             backend:
