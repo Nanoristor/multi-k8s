@@ -3,7 +3,7 @@ kind: Certificate
 metadata:
   name: nanok8s-com-tls
 spec:
-  secretName: nano-k8s-com
+  secretName: nanok8s-com
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
