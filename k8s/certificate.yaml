@@ -14,7 +14,7 @@ spec:
   acme:
     config:
       - http01:
-        ingressClass: nginx
-      domains:
-        - nanok8s.com
-        - www.nanok8s.com
+          ingressClass: nginx
+        domains:
+          - nanok8s.com
+          - www.nanok8s.com
